@@ -15,13 +15,11 @@ public class Mensola<T extends Oggetto> {
     }
 
     public void aggiungi(T oggetto){
-        if( numOggetti >= oggetti.length ){
+        if( numOggetti > oggetti.length ){
             raddoppiaArray();
         }
-        else{
-            oggetti[dl] = oggetto;
-            dl++;
-        }
+        oggetti[dl] = oggetto;
+        dl++;
     }
     public void raddoppiaArray(){
         this.numOggetti *= 2;
@@ -58,8 +56,8 @@ public class Mensola<T extends Oggetto> {
 
     public String toString(){
         String str = "\nMensola{\n   Nome: " + nome + "\n   Descrizione: " + descrizione + "\n   Oggetti: ";
-        for(int i=0; i<=dl; i++){
-            str += "\n      " + oggetti[i].toString();
+        for(int i=0; i<dl; i++){
+            str = str + "\n     " + oggetti[i].toString();
         }
         str += "\n}";
         return str;

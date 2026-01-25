@@ -19,6 +19,8 @@ public class Main {
         mensola1.aggiungi(b2);
         mensola1.aggiungi(f3);
 
+        System.out.println( mensola1.toString() );
+
         // mensola1.aggiungi(int1); //'aggiungi(Oggetto)' in 'Mensola' cannot be applied to '(java.lang.Integer)'
 
     }
