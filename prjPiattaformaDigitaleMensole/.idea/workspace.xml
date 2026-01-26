@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4f1a2102-77e1-42b4-a046-6517f830ab6b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../prjCassaforteTipiGenerici/src/Cassaforte2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mensola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prjCassaforteTipiGenerici/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../prjCassaforteTipiGenerici/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="38Thh4DgXkA1gL5F3EiWYQACKAp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "W:/4DS/Informatica/JAVA/java4DS/prjPiattaformaDigitaleMensole/src/Main.java"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f1a2102-77e1-42b4-a046-6517f830ab6b" name="Changes" comment="" />
+      <created>1768829585287</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768829585287</updated>
+    </task>
+    <servers />
+  </component>
+</project>
