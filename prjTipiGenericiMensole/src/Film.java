@@ -1,11 +1,30 @@
-public class Film extends Oggetto {
+public class Film implements Shelfable {
 
-    Film(String nome){
-        super(nome);
+    private String titolo;
+    private String trama;
+    private String regista;
+
+    Film(String titolo, String trama, String regista){
+        this.titolo = titolo;
+        this.regista = regista;
+        this.trama = trama;
     }
 
-    public String toString(){
-        return ("Il libro si intitola '" + getTitolo() + "'");
+    @Override
+    public String getNome() {
+        return titolo;
+    }
+    @Override
+    public String getDescrizione() {
+        return ( "\nFilm: \n   Titolo: " + titolo + "\n   Regista: " + regista + "\n   Trama: " + trama );
+    }
+    @Override
+    public void setNome(String nome) {
+        this.titolo = nome;
+    }
+    @Override
+    public void setDescrizione(String descrizione) {
+        this.trama = descrizione;
     }
 
 }

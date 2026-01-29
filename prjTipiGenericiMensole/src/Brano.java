@@ -1,11 +1,29 @@
-public class Brano extends Oggetto {
+public class Brano implements Shelfable {
 
-    Brano(String nome){
-        super(nome);
+    private String titolo;
+    private float durata;
+    private int anno_pubblicazione;
+
+    Brano(String titolo, float durata, int anno_pubblicazione){
+        this.titolo = titolo;
+        this.anno_pubblicazione = anno_pubblicazione;
+        this.durata = durata;
     }
 
-    public String toString(){
-        return ("Il libro si intitola '" + getTitolo() + "'");
+    @Override
+    public String getNome() {
+        return titolo;
     }
+    @Override
+    public String getDescrizione() {
+        return ( "\nBrano: \n   Titolo: " + titolo + "\n   Anno pubblicazione: " + anno_pubblicazione + "\n   Durata: " + durata );
+    }
+    @Override
+    public void setNome(String nome) {
+        this.titolo = nome;
+    }
+    @Override
+    public void setDescrizione(String descrizione) {
 
+    }
 }
