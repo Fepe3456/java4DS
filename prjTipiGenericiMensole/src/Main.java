@@ -7,7 +7,7 @@ public class Main {
         Libro l = new Libro("TitoloLibro", "trama_libro", 2010);
         Brano b = new Brano("TitoloBrano", 3.10f, 2000);
         Film f = new Film("TitoloFilm", "trama_film", "NomeRegista");
-        Oggetto o = new Oggetto("intruso");
+        Pupazzo o = new Pupazzo("nome_pupazzo" + 5.50f);
 
         mensola.aggiungi(l);
         mensola.aggiungi(b);

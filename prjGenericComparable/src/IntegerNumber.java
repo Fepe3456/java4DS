@@ -1,4 +1,4 @@
-public class IntegerNumber implements Comparable<IntegerNumber> {
+public class IntegerNumber implements MyComparable<IntegerNumber> {
 
     private Integer num;
 

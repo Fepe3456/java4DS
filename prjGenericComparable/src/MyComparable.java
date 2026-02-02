@@ -1,4 +1,4 @@
-public interface Comparable<T> {
+public interface MyComparable<T> {
 
     public int compareTo(T object2);
 

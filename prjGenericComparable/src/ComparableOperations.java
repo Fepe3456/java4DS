@@ -1,6 +1,6 @@
 public class ComparableOperations {
 
-    public static <T extends Comparable<T>> T findMin(T a, T b){
+    public static <T extends MyComparable<T>> T findMin(T a, T b){
         T ris = a;
         if( a.compareTo(b) == 2 ){
             ris = b;
@@ -8,7 +8,7 @@ public class ComparableOperations {
         return ris;
     }
 
-    public static <T extends Comparable<T>> String toString(T object){
+    public static <T extends MyComparable<T>> String toString(T object){
         return object.toString();
     }
 
