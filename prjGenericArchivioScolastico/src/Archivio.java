@@ -18,7 +18,7 @@ public class Archivio<T> {
     }
 
     public int getNullElements(){
-        return maxElements-dl;
+        return maxElements-dl-1;
     }
 
     public void addElement(T element){
