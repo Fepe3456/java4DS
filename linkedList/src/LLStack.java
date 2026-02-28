@@ -29,4 +29,15 @@ public class LLStack<T> implements Stack<T>{
     public int count() {
         return dl;
     }
+
+    public String toString(){
+        Node<T> current = stack.getHead();
+        String str = "";
+
+        while (current != null ) {
+            str += current.getData() + " ";
+            current = current.getNext();
+        }
+        return str;
+    }
 }
