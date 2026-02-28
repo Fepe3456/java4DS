@@ -1,6 +1,6 @@
 public interface Stack<T> {
-    void pop();
+    T pop();
     void push(T element);
-    Node<T> peek();
+    T peek();
     int count();
 }

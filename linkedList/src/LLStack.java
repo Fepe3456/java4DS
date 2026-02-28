@@ -1,17 +1,17 @@
 public class LLStack<T> implements Stack<T>{
 
-    private LinkedList stack ;
+    private LinkedList<T> stack ;
     private int dl;
 
     LLStack(){
-        stack = new LinkedList();
+        stack = new LinkedList<>();
         dl = 0;
     }
 
     @Override
-    public void pop() {
-        stack.deleteHead();
+    public T pop() {
         dl--;
+        return stack.deleteHead();
     }
 
     @Override
@@ -21,8 +21,8 @@ public class LLStack<T> implements Stack<T>{
     }
 
     @Override
-    public Node<T> peek() {
-        return stack.getHead().getNext();
+    public T peek() {
+        return stack.getHead().getData();
     }
 
     @Override

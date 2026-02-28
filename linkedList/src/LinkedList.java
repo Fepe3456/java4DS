@@ -1,82 +1,75 @@
-public class LinkedList {
+public class LinkedList<T> {
 
-    private Node head;
+    private Node<T> head;
 
-    LinkedList(){
-        head = new Node(-1);
-        head.setNext( null );
+    public LinkedList(){
+        this.head = null;
     }
 
-    public <T> void append(T element){
-        if( head.getNext() == null ){ //If the list is empty
-            Node node = new Node(element);
-            node.setNext( null );
-            head.setNext( node );
+    public void prepend(T value){
+        Node<T> newHead = new Node(value);
+        newHead.setNext(head);
+        head = newHead;
+    }
+
+    public void append(T element){
+        Node<T> node = new Node(element);
+        if( head == null ){ //If it's the first element
+            head = node;
         }
         else{
-            Node current = head.getNext();
+            Node<T> current = head;
             while( current.getNext() != null ){
                 current = current.getNext();
             }
-            Node newNode = new Node(element);
-            newNode.setNext( current.getNext() );
-            current.setNext( newNode );
+            current.setNext(node);
         }
     }
 
-    public <T> void prepend(T element){
-        if( head.getNext() == null ){ //If the list is empty
-            Node node = new Node(element);
-            node.setNext( null );
-            head.setNext( node );
-        }
-        else{ //If the list is not empty
-            Node node = new Node(element);
-            node.setNext( head.getNext() );
-            head.setNext( node );
-        }
-    }
-
-    public void deleteHead(){
-        Node first = head.getNext();
-        head.setNext( first.getNext() );
-    }
-
-    public <T> void deleteWithValue(T value) throws LinkedListException{
-        if( head.getNext() != null ){ //If the list is not empty
-            Node current = head.getNext();
-            Node next = current.getNext();
-            while( current.getNext() != null ){
-                if( next.getData() == value ){
-                    current.setNext( next.getNext() );
+    public void deleteWithValue(T value){
+        if( head != null ){
+            if( head.getData().equals(value) ){
+                head = head.getNext();
+            }
+            else {
+                Node current = head;
+                while (current.getNext() != null) {
+                    if (current.getNext().getData().equals(value)) {
+                        current.setNext(current.getNext().getNext());
+                        current = null;
+                    }
+                    current = current.getNext();
                 }
-                current = current.getNext();
-                next = current.getNext();
             }
-        }
-        else{
-            throw new LinkedListException("The list is empty and there is no elements to remove!");
         }
     }
 
-    public Node getHead(){
-        return head;
+    public T deleteHead() throws LinkedListException{
+        T data = null;
+        if( head != null ){
+            data = head.getData();
+            head = head.getNext();
+            return data;
+        }
+        return data;
     }
-    public void setHead(Node head){
-        this.head = head;
+
+    public Node<T> getHead(){
+        return this.head;
     }
 
     public String toString(){
-        String str = "LinkedList: ";
-        if( head.getNext() == null ) { //If the list is empty
-            str = "The LinkedList is empty";
+        String str = "LinkedList {";
+        if( head==null ){
+            str = "The LinkedList is empty!";
         }
         else{
-            Node current = head.getNext();
-            while( current.getNext() != null ){
-                str += "\n   " + current.getData();
+            Node<T> current = head;
+            while( current != null ){
+                str += "\n     Data: " + current.getData();
                 current = current.getNext();
             }
+            str += "\n}";
         }
         return str;
     }
