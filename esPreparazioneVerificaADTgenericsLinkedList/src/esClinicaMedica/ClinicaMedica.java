@@ -18,6 +18,7 @@ public class ClinicaMedica {
 
     public void registraPaziente(Paziente paziente){
         pazienti.add(paziente);
+        storicoOperazioni.push("Registrato paziente: " + paziente.toString()); 
     }
 
     public void addRichiesta(RichiestaVisita richiesta){
@@ -27,6 +28,7 @@ public class ClinicaMedica {
         else{
             richiesteNormali.offer(richiesta);
         }
+        storicoOperazioni.push("Aggiunta richiesta: " + richiesta.toString()); 
     }
 
     public void processaUnaRichiesta() throws Exception{
@@ -51,6 +53,7 @@ public class ClinicaMedica {
         else{
             richiesteNormali.remove(richiesta);
         }
+        storicoOperazioni.push("Richiesta annullata: " + richiesta.toString()); 
     }
 
     public String visualizzaRichiesteInCoda(){
